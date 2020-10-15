@@ -35,7 +35,7 @@ document.addEventListener('keydown', event => {
     // Get new state of piece
     let p = moves[event.keyCode](board.piece);
     
-    // if (board.valid(p)) {    
+    if (board.valid(p)) {    
       // If the move is valid, move the piece.
       board.piece.move(p);
       
@@ -43,6 +43,6 @@ document.addEventListener('keydown', event => {
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); 
       
       board.piece.draw();
-    // }
+    }
   }
 });
